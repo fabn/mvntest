@@ -1,1 +1,5 @@
 language: java
+script: "[ ${TRAVIS_PULL_REQUEST} = 'false' ] && mvn clean verify site --settings travis-settings.xml || mvn clean verify"
+env:
+  global:
+    secure: IlZEjVyf5I9HylbFpApvY01XcEv4QjbkBTsk10JWja6rbDoTMT2RC7/Co5TTSSkiUXtToCX3m5VV0pu4d/BPvk9OzBvdROyPOf2konBeX6AObIOxVzWF6NkCOzSN2PY1KT1Re1zfYZ533x24WID8VG8nCjMsj7RdEH5WfHhDd38=
